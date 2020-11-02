@@ -318,10 +318,12 @@ FMDBLogger *sqliteLogger;
 
 - (void) showAppSettings
 {
+    DDLogInfo(@"%@ #showingAppSettings", TAG);
+
     [self runOnMainThread:^{
         BOOL canGoToSettings = (UIApplicationOpenSettingsURLString != NULL);
         if (canGoToSettings) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=LOCATION_SERVICES"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-prefs:root=LOCATION_SERVICES"]];
           //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
         }
     }];
