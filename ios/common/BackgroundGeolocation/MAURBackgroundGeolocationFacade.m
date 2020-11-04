@@ -329,10 +329,31 @@ FMDBLogger *sqliteLogger;
     }];
 }
 
+- (void) showFullAppSettings
+{
+    DDLogInfo(@"%@ #showingFullAppSettings", TAG);
+
+    [self runOnMainThread:^{
+        BOOL canGoToSettings = (UIApplicationOpenSettingsURLString != NULL);
+        if (canGoToSettings) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        }
+    }];
+}
+
 - (void) showLocationSettings
 {
     // NOOP - Since Apple started rejecting apps using non public url schemes
     // https://github.com/mauron85/cordova-plugin-background-geolocation/issues/394
+    DDLogInfo(@"%@ #showLocationSettings", TAG);
+
+    [self runOnMainThread:^{
+        BOOL canGoToSettings = (UIApplicationOpenSettingsURLString != NULL);
+        if (canGoToSettings) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"App-prefs:root=LOCATION_SERVICES"]];
+          //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        }
+    }];
 }
 
 - (MAURLocation*) getStationaryLocation

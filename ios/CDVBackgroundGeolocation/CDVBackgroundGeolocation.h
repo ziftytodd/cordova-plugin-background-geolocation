@@ -23,6 +23,7 @@
 - (void) switchMode:(CDVInvokedUrlCommand*)command;
 - (void) isLocationEnabled:(CDVInvokedUrlCommand*)command;
 - (void) showAppSettings:(CDVInvokedUrlCommand*)command;
+- (void) showFullAppSettings:(CDVInvokedUrlCommand*)command;
 - (void) showLocationSettings:(CDVInvokedUrlCommand*)command;
 - (void) getStationaryLocation:(CDVInvokedUrlCommand *)command;
 - (void) getLocations:(CDVInvokedUrlCommand*)command;

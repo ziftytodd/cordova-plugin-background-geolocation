@@ -143,6 +143,13 @@ var BackgroundGeolocation = {
       'showAppSettings', []);
   },
 
+  showFullAppSettings: function () {
+    exec(emptyFnc,
+      emptyFnc,
+      'BackgroundGeolocation',
+      'showFullAppSettings', []);
+  },
+
   showLocationSettings: function () {
     exec(emptyFnc,
       emptyFnc,

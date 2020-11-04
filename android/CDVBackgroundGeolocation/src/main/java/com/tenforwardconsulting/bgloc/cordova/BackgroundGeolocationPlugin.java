@@ -56,6 +56,7 @@ public class BackgroundGeolocationPlugin extends CordovaPlugin implements Plugin
     public static final String ACTION_LOCATION_ENABLED_CHECK = "isLocationEnabled";
     public static final String ACTION_SHOW_LOCATION_SETTINGS = "showLocationSettings";
     public static final String ACTION_SHOW_APP_SETTINGS = "showAppSettings";
+    public static final String ACTION_SHOW_FULL_APP_SETTINGS = "showFullAppSettings";
     public static final String ACTION_GET_STATIONARY = "getStationaryLocation";
     public static final String ACTION_GET_ALL_LOCATIONS = "getLocations";
     public static final String ACTION_GET_VALID_LOCATIONS = "getValidLocations";
@@ -205,6 +206,10 @@ public class BackgroundGeolocationPlugin extends CordovaPlugin implements Plugin
             return true;
         } else if (ACTION_SHOW_APP_SETTINGS.equals(action)) {
             BackgroundGeolocationFacade.showAppSettings(context);
+
+            return true;
+        } else if (ACTION_SHOW_FULL_APP_SETTINGS.equals(action)) {
+            BackgroundGeolocationFacade.showFullAppSettings(context);
 
             return true;
         } else if (ACTION_GET_STATIONARY.equals(action)) {

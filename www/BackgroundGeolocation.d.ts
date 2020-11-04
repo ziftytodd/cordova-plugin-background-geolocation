@@ -557,6 +557,8 @@ export interface BackgroundGeolocationPlugin {
    */
   showAppSettings(): void;
 
+  showFullAppSettings(): void;
+
   /**
    * Show system settings to allow configuration of current location sources.
    *

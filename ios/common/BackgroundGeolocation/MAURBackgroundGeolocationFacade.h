@@ -27,6 +27,7 @@
 - (MAURLocationAuthorizationStatus) authorizationStatus;
 - (BOOL) isStarted;
 - (void) showAppSettings;
+- (void) showFullAppSettings;
 - (void) showLocationSettings;
 - (void) switchMode:(MAUROperationalMode)mode;
 - (MAURLocation*)getStationaryLocation;

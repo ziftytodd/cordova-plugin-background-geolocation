@@ -177,6 +177,14 @@ static NSString * const TAG = @"CDVBackgroundGeolocation";
     }];
 }
 
+- (void) showFullAppSettings:(CDVInvokedUrlCommand*)command
+{
+    NSLog(@"%@ #%@", TAG, @"showFullAppSettings");
+    [self.commandDelegate runInBackground:^{
+        [facade showFullAppSettings];
+    }];
+}
+
 - (void) showLocationSettings:(CDVInvokedUrlCommand*)command
 {
     NSLog(@"%@ #%@", TAG, @"showLocationSettings");
